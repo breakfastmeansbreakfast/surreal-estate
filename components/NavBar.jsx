@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../NavBar.css';
 
 const NavBar = () => (
@@ -6,8 +7,8 @@ const NavBar = () => (
     <i className="fab fa-jenkins fa-3x"></i>
     <h1>Surreal Estate</h1>
     <ul className="nav">
-      <li>View properties</li>
-      <li>Add a property</li>
+      <Link to="/">View properties</Link>
+      <Link to="/add-property">Add a property</Link>
     </ul>
   </div>
 );
