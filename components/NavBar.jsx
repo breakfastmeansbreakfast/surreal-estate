@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../NavBar.css';
+import './NavBar.css';
 
 const NavBar = () => (
   <div className="NavBar">
-    <i className="fab fa-jenkins fa-3x"></i>
+    <i className="fab fa-jenkins fa-3x" />
     <h1>Surreal Estate</h1>
     <ul className="nav">
       <Link to="/">View properties</Link>

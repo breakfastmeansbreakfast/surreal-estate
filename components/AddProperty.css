@@ -1,0 +1,22 @@
+.AddProperty {
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.title1 {
+    font-weight: bold;
+}
+
+.AddProperty label, input, select {
+    margin: 25px;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.AddProperty input {
+    padding: 20px;
+    font-size: 1.5em;
+}
