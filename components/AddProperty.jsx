@@ -1,5 +1,6 @@
 import React from 'react';
 import './AddProperty.css';
+import Axios from 'axios';
 
 class AddProperty extends React.Component {
   constructor() {
@@ -9,13 +10,22 @@ class AddProperty extends React.Component {
         title: '',
         type: 'Flat',
         city: 'Manchester',
+        price: 0,
+        bedrooms: 0,
+        bathrooms: 0,
+        email: 'user@email.com',
       },
     };
   }
 
+
 handleAddProperty = event => {
   event.preventDefault();
-  console.log(this.state.fields);
+  Axios.post('http://localhost:3000/api/v1/PropertyListing', this.state.fields)
+    .then(res => {
+      console.log(res);
+      console.log(res.data);
+    });
 };
 
 handleChangeField = event => {
@@ -51,7 +61,15 @@ render() {
           <option value="Cottage">Cottage</option>
           <option value="Bungalow">Bungalow</option>
         </select> <br />
-        <button type="submit">Add</button>
+        <label htmlFor="bedrooms">Bedrooms</label>
+        <input className="inputNumber" type="number" id="bedrooms" name="bedrooms" value={this.state.fields.bedrooms} onChange={this.handleChangeField} />
+        <label htmlFor="bathrooms">Bathrooms</label>
+        <input className="inputNumber" type="number" id="bathrooms" name="bathrooms" value={this.state.fields.bathrooms} onChange={this.handleChangeField} /> <br />
+        <label htmlFor="price">Price</label>
+        <input type="number" id="price" name="price" value={this.state.fields.price} onChange={this.handleChangeField} /> <br /> <br />
+        <label htmlFor="email">Email</label>
+        <input type="text" id="email" name="email" value={this.state.fields.email} onChange={this.handleChangeField} /> <br />
+        <button className="inputSubmit" type="submit">Add</button>
       </form>
     </div>
   );

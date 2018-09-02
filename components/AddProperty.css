@@ -4,6 +4,7 @@
     border-radius: 5px;
     display: inline-block;
     margin-left: 10px;
+    margin-bottom: 40px;
 }
 
 .title1 {
@@ -11,12 +12,22 @@
 }
 
 .AddProperty label, input, select {
-    margin: 25px;
-    padding: 20px;
+    margin: 15px;
+    padding: 10px;
     font-size: 1.5em;
 }
 
 .AddProperty input {
     padding: 20px;
     font-size: 1.5em;
+}
+
+.AddProperty button {
+    padding: 20px;
+    font-size:1.5em;
+    align-content: center;
+}
+
+.inputNumber {
+    width: 50px;
 }
